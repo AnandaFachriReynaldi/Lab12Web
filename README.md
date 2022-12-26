@@ -8,6 +8,22 @@
 Buka XAMPP Control Lalu Klik `Start` untuk menjalankan MySQL Server. Pastikan web server Apache dan MySQL Server sudah dijalankan.
 ![Step1](SS/SS1.png)<br>
 
+<b> Membuat Pencarian Data</b>
+
+Pada data awal, query untuk menampilkan semua data adalah : 
+```
+$sql = “SELECT * FROM data_barang”;
+```
+Nah untuk menambahkan pencarian, maka query tersebut harus ditambahkan klausa WHERE sebagai 
+filter, sehingga menjadi:
+```
+$sql = “SELECT * FROM data_barang WHERE nama = ‘{$var_nama}’”;
+```
+Atau dapat juga menggunakan LIKE seperti berikut:
+```
+$sql = “SELECT * FROM data_barang WHERE nama LIKE ‘{$var_nama}%’”;
+```
+
 Mengubah Query dan tambahkan filter pencarian pada Query tersebut
 ![Step2](SS/SS2.png)<br>
 
